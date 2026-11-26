@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Banyak Gambar</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        /* Wadah utama menggunakan CSS Grid agar otomatis rapi di HP maupun Laptop */
+        .galeri-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Kartu pembungkus tiap gambar */
+        .item-gambar {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Pengaturan agar ukuran gambar seragam dan tidak gepeng */
+        .item-gambar img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        /* Efek zoom halus saat kursor diarahkan ke gambar */
+        .item-gambar img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="galeri-grid">
+        <!-- Gambar 1 -->
+        <div class="item-gambar">
+            <img src="https://picsum.photos/400/300?random=1" alt="Deskripsi Gambar 1" loading="lazy">
+        </div>
+
+        <!-- Gambar 2 -->
+        <div class="item-gambar">
+            <img src="https://picsum.photos/400/300?random=2" alt="Deskripsi Gambar 2" loading="lazy">
+        </div>
+
+        <!-- Gambar 3 -->
+        <div class="item-gambar">
+            <img src="https://picsum.photos/400/300?random=3" alt="Deskripsi Gambar 3" loading="lazy">
+        </div>
+
+        <!-- Gambar 4 -->
+        <div class="item-gambar">
+            <img src="https://picsum.photos/400/300?random=4" alt="Deskripsi Gambar 4" loading="lazy">
+        </div>
+
+        <!-- Tambahkan blok <div class="item-gambar">...</div> lainnya di bawah ini sesuai jumlah gambar -->
+    </div>
+
+</body>
+</html>
